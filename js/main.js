@@ -65,7 +65,17 @@ document.addEventListener("click", (e) => {
   else if (m) goMiu();
   else if (a) goMiu(a.dataset.ask);
 });
-new IntersectionObserver((es, o) => es.forEach((e) => { if (e.isIntersecting) { chat.warm(); o.disconnect(); } }), { rootMargin: "600px" }).observe($("#miu"));
+// Fetch Miu's files together in the background, so the first answer is quick
+const warmMiu = () => {
+  for (const m of ["index", "data", "lib/twin", "lib/retrieve", "lib/text", "lib/skills", "lib/db", "lib/knowledge", "providers/gemini"]) {
+    const l = document.createElement("link");
+    l.rel = "modulepreload";
+    l.href = new URL(`./miu/${m}.js`, import.meta.url).href;
+    document.head.append(l);
+  }
+  chat.warm();
+};
+if (document.readyState === "complete") setTimeout(warmMiu, 300); else addEventListener("load", () => setTimeout(warmMiu, 300));
 new IntersectionObserver(([e]) => document.body.classList.toggle("miu-seen", e.isIntersecting), { threshold: 0.15 }).observe($("#miu"));
 
 /* ------------------------------------------------ skills */
