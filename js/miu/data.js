@@ -59,7 +59,7 @@ export const profile = {
 export const projects = [
  {
   "demo": null,
-  "cover": null,
+  "cover": "https://raw.githubusercontent.com/Megharaykar27/MyTwin/main/docs/screenshots/home.png",
   "slug": "mytwin",
   "name": "MyTwin",
   "tagline": "Miu, a twin AI that answers recruiters from real facts",

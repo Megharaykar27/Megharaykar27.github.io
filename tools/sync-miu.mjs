@@ -18,10 +18,8 @@ const { chunk, redactPhones } = await import(pathToFileURL(path.join(TWIN, "serv
 const SKIP = ["skincart"];
 const seed = path.join(TWIN, "server", "seed");
 const profile = JSON.parse(read(path.join(seed, "profile.json")));
-const projects = [
-  { slug: "mytwin", name: "MyTwin", tagline: "Miu, a twin AI that answers recruiters from real facts", tech: ["React", "Node.js", "Express", "SQLite", "Gemini"], repo: "https://github.com/Megharaykar27/MyTwin", aliases: ["my twin", "ai twin"] },
-  ...JSON.parse(read(path.join(seed, "projects.json"))).filter((p) => !SKIP.includes(p.slug)),
-].map((p, i) => ({ demo: null, cover: null, ...p, featured: true, sort: i }));
+const listed = JSON.parse(read(path.join(seed, "projects.json"))).filter((p) => !SKIP.includes(p.slug));
+const projects = [...listed.filter((p) => p.slug === "mytwin"), ...listed.filter((p) => p.slug !== "mytwin")].map((p, i) => ({ demo: null, cover: null, ...p, featured: true, sort: i }));
 
 const docs = [{ id: "resume", source: "resume", title: "Resume", url: null, project: null, body: read(path.join(seed, "resume.md")).replace(/## Project: SkinCart[\s\S]*?(?=\n## )/, "") }];
 for (const p of projects) {
