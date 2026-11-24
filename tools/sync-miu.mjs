@@ -14,14 +14,16 @@ const write = (p, s) => { fs.mkdirSync(path.dirname(p), { recursive: true }); fs
 for (const f of ["text.js", "retrieve.js", "skills.js", "twin.js"]) write(path.join(OUT, "lib", f), read(path.join(TWIN, "server", "lib", f)));
 
 const { chunk, redactPhones } = await import(pathToFileURL(path.join(TWIN, "server", "lib", "text.js")));
+// Not shown on the portfolio, so Miu doesn't bring it up here either
+const SKIP = ["skincart"];
 const seed = path.join(TWIN, "server", "seed");
 const profile = JSON.parse(read(path.join(seed, "profile.json")));
 const projects = [
   { slug: "mytwin", name: "MyTwin", tagline: "Miu, a twin AI that answers recruiters from real facts", tech: ["React", "Node.js", "Express", "SQLite", "Gemini"], repo: "https://github.com/Megharaykar27/MyTwin", aliases: ["my twin", "ai twin"] },
-  ...JSON.parse(read(path.join(seed, "projects.json"))),
+  ...JSON.parse(read(path.join(seed, "projects.json"))).filter((p) => !SKIP.includes(p.slug)),
 ].map((p, i) => ({ demo: null, cover: null, ...p, featured: true, sort: i }));
 
-const docs = [{ id: "resume", source: "resume", title: "Resume", url: null, project: null, body: read(path.join(seed, "resume.md")) }];
+const docs = [{ id: "resume", source: "resume", title: "Resume", url: null, project: null, body: read(path.join(seed, "resume.md")).replace(/## Project: SkinCart[\s\S]*?(?=\n## )/, "") }];
 for (const p of projects) {
   const f = p.slug === "mytwin" ? path.join(TWIN, "README.md") : path.join(seed, "readmes", `${p.name}.md`);
   if (fs.existsSync(f)) docs.push({ id: `gh-${p.slug}`, source: "github", title: p.name, url: p.repo, project: p.slug, body: read(f) });
