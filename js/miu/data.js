@@ -6,7 +6,7 @@ export const profile = {
  "headline": "MCA student and aspiring full-stack developer",
  "location": "Karwar, Karnataka, India",
  "email": "megharaykar04@gmail.com",
- "linkedin": "https://www.linkedin.com/in/megha-raykar-335617337",
+ "linkedin": "https://www.linkedin.com/in/meghxcoder",
  "github": "https://github.com/Megharaykar27",
  "portfolio": "",
  "availability": "Open to full-stack and Python developer internships and fresher roles",
@@ -231,7 +231,7 @@ export const chunks = [
  {
   "id": 2,
   "heading": "Location and contact",
-  "text": "Based in Karwar, Karnataka, India. Currently studying in Mangaluru. Email: megharaykar04@gmail.com. LinkedIn: linkedin.com/in/megha-raykar-335617337. GitHub: github.com/Megharaykar27.",
+  "text": "Based in Karwar, Karnataka, India. Currently studying in Mangaluru. Email: megharaykar04@gmail.com. LinkedIn: linkedin.com/in/meghxcoder. GitHub: github.com/Megharaykar27.",
   "doc_id": "resume",
   "title": "Resume",
   "source": "resume",
