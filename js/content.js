@@ -37,13 +37,6 @@ export const PROJECTS = [
     bloom: ["Free try-on with a diffusion model", "Outfit planner that ranks your best three looks", "Kind, body-positive style profile", "Falls back gracefully when an AI step is busy"],
   },
   {
-    slug: "glowup", name: "GlowUp", by: "online store", tagline: "Full-stack beauty store with an AI shopping advisor", image: "assets/work/glowup.jpg", repo: "https://github.com/Megharaykar27/GlowUp",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Gemini API", "Razorpay"], flower: { petals: 7, layers: 4, hue: "blush" },
-    seed: "Beauty shopping is full of choices and short on guidance.",
-    grew: "A complete store: search, reviews, wishlist, coupons, checkout and live order tracking, with an advisor that only recommends products that exist.",
-    bloom: ["Razorpay payments in test mode, checked on the server", "Two shoppers can never buy the same last item", "Admin dashboard with revenue and low-stock alerts", "The advisor works without an AI key too"],
-  },
-  {
     slug: "habit-tracker", name: "Habit Tracker", by: "two-person team project", tagline: "Android habit app with streaks and a journal", image: "assets/work/habit-tracker.jpg", repo: "https://github.com/Megharaykar27/HabitTracker",
     tech: ["Kotlin", "Jetpack Compose", "Room", "Firebase"], flower: { petals: 10, layers: 2, hue: "sage" },
     seed: "Good habits fade when you can't see them.",
@@ -57,16 +50,16 @@ export const SKILLS = [
   ["Backend", ["Node.js", "Express", "Python", "Flask", "FastAPI"]],
   ["Databases", ["SQLite", "MongoDB", "MySQL", "SQLAlchemy"]],
   ["AI & ML", ["Gemini API", "scikit-learn", "OpenCV", "Machine Learning"]],
-  ["Mobile & tools", ["Kotlin", "Jetpack Compose", "Git", "Linux", "Razorpay"]],
+  ["Mobile & tools", ["Kotlin", "Jetpack Compose", "Git", "Linux"]],
 ];
 
 // Skills that don't appear as a project's main tech, with where they were used
 export const ALSO = {
-  JavaScript: ["mytwin", "snapprice", "skinscan", "neurocheck", "styletwin", "glowup"],
-  HTML: ["mytwin", "snapprice", "skinscan", "neurocheck", "styletwin", "glowup"],
-  CSS: ["mytwin", "snapprice", "skinscan", "neurocheck", "styletwin", "glowup"],
+  JavaScript: ["mytwin", "snapprice", "skinscan", "neurocheck", "styletwin"],
+  HTML: ["mytwin", "snapprice", "skinscan", "neurocheck", "styletwin"],
+  CSS: ["mytwin", "snapprice", "skinscan", "neurocheck", "styletwin"],
   "Tailwind CSS": ["mytwin", "snapprice", "skinscan", "styletwin"],
   "Machine Learning": ["neurocheck"],
-  Git: ["mytwin", "snapprice", "skinscan", "neurocheck", "styletwin", "glowup", "habit-tracker"],
+  Git: ["mytwin", "snapprice", "skinscan", "neurocheck", "styletwin", "habit-tracker"],
 };
-export const NOTES = { MySQL: "Learned in my degree and listed on my resume.", Linux: "Ubuntu, learned in my degree and listed on my resume." };
+export const NOTES = { MongoDB: "On my resume, learned while building full-stack apps.", MySQL: "Learned in my degree and listed on my resume.", Linux: "Ubuntu, learned in my degree and listed on my resume." };

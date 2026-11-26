@@ -15,7 +15,7 @@ for (const f of ["text.js", "retrieve.js", "skills.js", "twin.js"]) write(path.j
 
 const { chunk, redactPhones } = await import(pathToFileURL(path.join(TWIN, "server", "lib", "text.js")));
 // Not shown on the portfolio, so Miu doesn't bring it up here either
-const SKIP = ["skincart"];
+const SKIP = ["skincart", "glowup"];
 const seed = path.join(TWIN, "server", "seed");
 const profile = JSON.parse(read(path.join(seed, "profile.json")));
 const listed = JSON.parse(read(path.join(seed, "projects.json"))).filter((p) => !SKIP.includes(p.slug));

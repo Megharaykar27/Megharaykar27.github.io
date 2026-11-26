@@ -174,30 +174,6 @@ export const projects = [
  {
   "demo": null,
   "cover": null,
-  "slug": "glowup",
-  "name": "GlowUp",
-  "tagline": "Full-stack beauty store with an AI shopping advisor",
-  "tech": [
-   "React",
-   "Node.js",
-   "Express",
-   "MongoDB",
-   "Gemini",
-   "Razorpay"
-  ],
-  "repo": "https://github.com/Megharaykar27/GlowUp",
-  "aliases": [
-   "glow up",
-   "e-commerce",
-   "ecommerce",
-   "store"
-  ],
-  "featured": true,
-  "sort": 5
- },
- {
-  "demo": null,
-  "cover": null,
   "slug": "habit-tracker",
   "name": "Habit Tracker",
   "tagline": "Android habit tracker with Jetpack Compose and Room",
@@ -214,7 +190,7 @@ export const projects = [
    "android"
   ],
   "featured": true,
-  "sort": 6
+  "sort": 5
  }
 ];
 export const chunks = [
@@ -331,7 +307,7 @@ export const chunks = [
  {
   "id": 12,
   "heading": "Skills used in her projects (full tech stack)",
-  "text": "Frontend: React 18, Vite, Tailwind CSS, Framer Motion, Recharts, React Router, HTML, CSS, JavaScript. Backend: Node.js, Express, Flask (Python), FastAPI (Python), REST API design, JWT authentication, bcrypt password hashing, rate limiting and Helmet security headers. Databases: SQLite, MongoDB (Mongoose), MySQL, SQLAlchemy. AI and machine learning: Google Gemini API (vision and structured JSON output), scikit-learn, Pandas, NumPy, leak-safe cross-validation, model calibration, OpenCV computer vision (YuNet face detection), Tesseract.js OCR, IDM-VTON diffusion try-on through Hugging Face. Other: SerpApi Google Shopping data, Razorpay payments, sharp image processing, Playwright end-to-end testing, node:test and pytest unit tests, Git and GitHub. Mobile: Kotlin, Jetpack Compose, Room, Firebase.",
+  "text": "Frontend: React 18, Vite, Tailwind CSS, Framer Motion, Recharts, React Router, HTML, CSS, JavaScript. Backend: Node.js, Express, Flask (Python), FastAPI (Python), REST API design, JWT authentication, bcrypt password hashing, rate limiting and Helmet security headers. Databases: SQLite, MySQL, SQLAlchemy. AI and machine learning: Google Gemini API (vision and structured JSON output), scikit-learn, Pandas, NumPy, leak-safe cross-validation, model calibration, OpenCV computer vision (YuNet face detection), Tesseract.js OCR, IDM-VTON diffusion try-on through Hugging Face. Other: SerpApi Google Shopping data, sharp image processing, Playwright end-to-end testing, node:test and pytest unit tests, Git and GitHub. Mobile: Kotlin, Jetpack Compose, Room, Firebase.",
   "doc_id": "resume",
   "title": "Resume",
   "source": "resume",
@@ -1027,115 +1003,5 @@ export const chunks = [
   "source": "github",
   "url": "https://github.com/Megharaykar27/StyleTwin",
   "project": "styletwin"
- },
- {
-  "id": 82,
-  "heading": "Glow Up",
-  "text": "A full-stack fashion & beauty store with an AI shopping advisor.\nReact · Node.js · Express · MongoDB · Google Gemini · Razorpay\n \nLive demo · Video walkthrough\n \nGlowUp is a complete e-commerce web app for makeup, skincare, fashion and jewellery. Shoppers can browse and filter the catalogue, save a wishlist, apply coupons, pay with Razorpay or cash on delivery, and track every order on a live timeline. Glow, the built-in AI advisor, turns a plain-English request like \"wedding next month, dry skin, ₹5,000 budget\" into product picks from the store's own catalogue. Admins get a dashboard with sales charts, stock alerts and full product, order and coupon management.\n Try it without signing up: demo@glowup.com / glowup123 (there's a one-click \"fill demo account\" button on the sign-in page).",
-  "doc_id": "gh-glowup",
-  "title": "GlowUp",
-  "source": "github",
-  "url": "https://github.com/Megharaykar27/GlowUp",
-  "project": "glowup"
- },
- {
-  "id": 83,
-  "heading": "Features",
-  "text": "Shopping\n- Search, multi-category filters, price ranges, sorting and pagination, all kept in the URL so filtered pages can be shared and bookmarked\n- Product pages with image gallery, hover-to-zoom, stock warnings and related products\n- Ratings and reviews: one review per customer, verified purchase badge for delivered orders, average rating calculated from real reviews\n- Wishlist with instant (optimistic) updates\n- Bag with quantity limits checked against live stock, a free-shipping progress bar and coupon codes\nCheckout & orders\n- Address validation (Indian mobile number and pincode formats)\n- Razorpay online payment (test mode) with server-side signature verification, plus cash on delivery\n- Safe stock handling: stock is reserved with an atomic MongoDB update, so two shoppers can never buy the same last item; it's released again if payment is abandoned or the order is cancelled",
-  "doc_id": "gh-glowup",
-  "title": "GlowUp",
-  "source": "github",
-  "url": "https://github.com/Megharaykar27/GlowUp",
-  "project": "glowup"
- },
- {
-  "id": 84,
-  "heading": "Features",
-  "text": "- Order tracking timeline (Placed → Packed → Shipped → Out for Delivery → Delivered), and customers can cancel before shipping\nAI Beauty Advisor (\"Glow\")\n- Chat assistant powered by Google Gemini, limited to recommending products that really exist in the catalogue (the server checks every product id it returns)\n- Understands skin type, occasion and budget, and replies in short, friendly sentences with product cards\n- Works without an API key too: a keyword matcher with budget detection takes over automatically\nAdmin dashboard\n- Revenue, orders, customers and average order value\n- 14-day revenue chart, sales by category, top sellers, low-stock alerts, recent orders\n- Add, edit and delete products (image URL or Cloudinary upload)\n- Move orders through each status; cancelling restocks items automatically",
-  "doc_id": "gh-glowup",
-  "title": "GlowUp",
-  "source": "github",
-  "url": "https://github.com/Megharaykar27/GlowUp",
-  "project": "glowup"
- },
- {
-  "id": 85,
-  "heading": "Features",
-  "text": "- Create, pause and delete coupons (percentage or flat, minimum order, maximum discount, expiry date)\nQuality\n- JWT authentication with protected and admin-only routes\n- Security middleware: Helmet headers, rate limiting on login and the AI chat, request size limits, field allow-lists on admin updates\n- One central error handler, so every API error has the same { message } shape\n- Responsive editorial design with Framer Motion animations, loading skeletons, and pages that load only when visited",
-  "doc_id": "gh-glowup",
-  "title": "GlowUp",
-  "source": "github",
-  "url": "https://github.com/Megharaykar27/GlowUp",
-  "project": "glowup"
- },
- {
-  "id": 86,
-  "heading": "Tech stack",
-  "text": "· Layer · Tools · \n \n · Frontend · React 18, Vite, React Router 6, Tailwind CSS, Framer Motion, Recharts, Axios, Lucide icons · \n · Backend · Node.js, Express, Mongoose, JWT, bcrypt, Helmet, express-rate-limit, Multer · \n · Database · MongoDB Atlas · \n · Services · Google Gemini API, Razorpay (test mode), Cloudinary ·",
-  "doc_id": "gh-glowup",
-  "title": "GlowUp",
-  "source": "github",
-  "url": "https://github.com/Megharaykar27/GlowUp",
-  "project": "glowup"
- },
- {
-  "id": 87,
-  "heading": "How it's built",
-  "text": "A few design decisions:\n- Money is calculated in one place. server/utils/pricing.js computes subtotal, coupon discount, shipping and total for both the bag and checkout, so the price shown is always the price charged. The client never sends prices.\n- Orders copy product details. Each order stores the name, image and price at the time of purchase, so editing a product later never changes old orders.\n- Optional services switch themselves off. GET /api/config tells the frontend which services have keys set. Without Razorpay keys, checkout offers only cash on delivery; without a Gemini key, the advisor uses keyword matching.",
-  "doc_id": "gh-glowup",
-  "title": "GlowUp",
-  "source": "github",
-  "url": "https://github.com/Megharaykar27/GlowUp",
-  "project": "glowup"
- },
- {
-  "id": 88,
-  "heading": "API overview",
-  "text": "· Method · Endpoint · Access · \n \n · POST · /api/auth/register, /api/auth/login · Public · \n · GET / PUT · /api/auth/me · User · \n · GET · /api/products?search=&category=&minPrice=&maxPrice=&sort=&page= · Public · \n · GET · /api/products/meta, /api/products/:id · Public · \n · POST · /api/products/:id/reviews · User · \n · POST / PUT / DELETE · /api/products, /api/products/:id · Admin · \n · GET / POST / PUT / DELETE · /api/cart, /api/cart/:productId · User · \n · GET / POST · /api/wishlist, /api/wishlist/:productId · User · \n · POST · /api/orders, /api/orders/:id/verify, /api/orders/:id/abandon · User · \n · GET · /api/orders/mine, /api/orders/:id · User · \n · PUT · /api/orders/:id/cancel · User · \n · GET / PUT · /api/orders, /api/orders/:id/status · Admin · \n · GET · /api/coupons/public · Public · \n · GET / POST / PUT / DELETE · /api/coupons · Admin · \n · POST · /api/advisor · Public (rate limited) · \n · GET · /api/admin/stats · Admin ·",
-  "doc_id": "gh-glowup",
-  "title": "GlowUp",
-  "source": "github",
-  "url": "https://github.com/Megharaykar27/GlowUp",
-  "project": "glowup"
- },
- {
-  "id": 89,
-  "heading": "Run it locally",
-  "text": "You need Node.js 18+ and a free MongoDB Atlas database.\nbash\ngit clone https://github.com/Megharaykar27/GlowUp.git\ncd GlowUp",
-  "doc_id": "gh-glowup",
-  "title": "GlowUp",
-  "source": "github",
-  "url": "https://github.com/Megharaykar27/GlowUp",
-  "project": "glowup"
- },
- {
-  "id": 90,
-  "heading": "1. Backend",
-  "text": "cd server\nnpm install\ncp .env.example .env then fill in MONGODBURI and JWTSECRET\nnpm run seed adds 30 products, sample orders, coupons and demo accounts\nnpm run dev API on http://localhost:5000",
-  "doc_id": "gh-glowup",
-  "title": "GlowUp",
-  "source": "github",
-  "url": "https://github.com/Megharaykar27/GlowUp",
-  "project": "glowup"
- },
- {
-  "id": 91,
-  "heading": "2. Frontend (new terminal)",
-  "text": "cd client\nnpm install\nnpm run dev store on http://localhost:5173\nThe seed script prints the admin login. Set SEEDADMINPASSWORD in .env to choose it yourself.\nOptional keys (in server/.env, all have free tiers):\n · Variable · Turns on · \n \n · GEMINIAPIKEY · Gemini-powered advisor (get a key) · \n · RAZORPAYKEYID, RAZORPAYKEYSECRET · Online payment (use Test Mode keys) · \n · CLOUDINARY · Image upload in the admin panel · \nRazorpay test card: [phone hidden] 1111, any future expiry, any CVV.",
-  "doc_id": "gh-glowup",
-  "title": "GlowUp",
-  "source": "github",
-  "url": "https://github.com/Megharaykar27/GlowUp",
-  "project": "glowup"
- },
- {
-  "id": 92,
-  "heading": "Credits",
-  "text": "Product photos from Unsplash (Unsplash License). Brands and products in the demo data are fictional.\n \nBuilt by Megha Raykar · GitHub · LinkedIn",
-  "doc_id": "gh-glowup",
-  "title": "GlowUp",
-  "source": "github",
-  "url": "https://github.com/Megharaykar27/GlowUp",
-  "project": "glowup"
  }
 ];
